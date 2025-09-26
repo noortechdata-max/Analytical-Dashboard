@@ -1,0 +1,109 @@
+Skill,Average_Monthly_USD,Demand_Level,Supply_Level,Learning Path (Free)
+Content writing & blogging,4033,Medium,High,freeCodeCamp (writing guides); YouTube: Neil Patel / HubSpot
+"Copywriting (ads, sales pages, landing pages)",5600,Medium,High,Copyhackers blog; YouTube: Neville Medhora
+Technical writing,4667,Medium,High,Google Technical Writing course (Coursera audit); Write the Docs
+"Creative writing (stories, scripts, eBooks)",3367,Medium,High,Reedsy YouTube tutorials; Brandon Sanderson lectures (YouTube)
+Grant writing & proposals,4133,Medium,High,Candid (Foundation Center) guides; YouTube grant writing tutorials
+Proofreading & editing,2258,Medium,Medium,Purdue OWL; Coursera grammar courses (audit)
+Ghostwriting,6500,Medium,High,Reedsy blog; YouTube self-publishing guides
+Resume/CV writing & LinkedIn profile optimization,1883,Medium,High,LinkedIn articles; YouTube: Jeff Su
+Academic writing / research papers,3733,Medium,High,Coursera 'Writing in the Sciences' (audit); OWL Purdue
+Translation & transcription,2383,Medium,High,YouTube translators channels; Otter.ai free plan for practice
+"Scriptwriting (YouTube, podcasts, ads)",3933,Medium,High,Screencraft guides; YouTube: Film Riot
+Search Engine Optimization (SEO),5500,High,Medium,Moz Beginner's Guide; YouTube: Ahrefs channel
+"Search Engine Marketing (Google Ads, Bing Ads)",6267,Medium,Medium,Google Skillshop (Google Ads training)
+Social Media Marketing,4567,Medium,High,Meta Blueprint; HubSpot Academy
+"Social Media Content Creation (posts, reels, carousels)",3658,Medium,High,Later.com YouTube; Hootsuite blog
+"Paid Ads Management (Facebook, TikTok, LinkedIn Ads)",6267,High,Medium,Meta Blueprint; TikTok Ads Learning Center
+"Email marketing (Mailchimp, ConvertKit, etc.)",4608,High,Medium,HubSpot Academy Email Marketing; Mailchimp guides
+Influencer marketing strategy,5500,Medium,Medium,HubSpot articles; YouTube influencer marketing talks
+Affiliate marketing,5783,Medium,Medium,Pat Flynn (Smart Passive Income) blog; Authority Hacker articles
+"Funnel building (ClickFunnels, Leadpages, etc.)",6267,High,Medium,ClickFunnels YouTube; Russell Brunson tutorials
+"Marketing automation (HubSpot, Marketo, Zapier)",5550,Medium,Medium,HubSpot Academy; Zapier Learning Center
+Growth hacking,7567,Medium,Medium,Brian Balfour blog; Growth Tribe YouTube clips
+Brand strategy & storytelling,7533,Medium,Medium,Coursera Brand Management (audit); Simon Sinek videos
+Community management,2625,Medium,Medium,CMX Hub resources; Community Signal podcast clips
+"Graphic design (Photoshop, Illustrator, CorelDraw)",3667,Medium,Medium,The Futur YouTube; Adobe tutorials
+Logo & brand identity design,5033,Medium,Medium,Will Paterson channel; The Futur branding tutorials
+Canva design,1883,Medium,High,Canva Design School (official free)
+"UI/UX design (Figma, Sketch, Adobe XD)",7533,High,Medium,Figma Community tutorials; freeCodeCamp UI/UX playlist
+Product mockups & prototyping,4533,Medium,Medium,Figma tutorials; Kevin Powell YouTube
+Presentation design,2592,Medium,Medium,Slide Cow; PowerPoint School YouTube
+"Video editing (Premiere Pro, Final Cut, DaVinci Resolve, etc.)",5767,Medium,High,Peter McKinnon; DaVinci Resolve official training
+Motion graphics (After Effects),7050,Medium,Medium,ECAbrams YouTube; School of Motion free tutorials
+"2D & 3D animation (Blender, Maya, Cinema4D)",8217,Medium,Medium,Blender Guru; Blender official tutorials
+Infographic design,2592,Medium,Medium,Canva Design School; Venngage blog
+"Print design (flyers, brochures, posters)",2592,Medium,Medium,Envato Tuts+; Adobe tutorials
+Packaging design,4533,Medium,Medium,The Futur packaging videos; Adobe packaging tutorials
+Photography & photo editing,5767,Medium,High,Peter McKinnon; Phlearn tutorials
+Digital illustration & concept art,5033,Medium,Medium,Proko; Ctrl+Paint
+NFT art design,10683,High,Medium,OpenSea guides; YouTube: NFT Now
+"Web development (HTML, CSS, JavaScript)",5833,High,Medium,freeCodeCamp full curriculum; MDN Web Docs
+"Frontend frameworks (React, Vue, Angular, Svelte)",7533,High,Medium,The Net Ninja YouTube; official framework docs
+"Backend development (Node.js, Django, Flask, etc.)",8733,High,Medium,Traversy Media; freeCodeCamp backend modules
+Full-stack development,11667,High,Medium,The Odin Project; freeCodeCamp
+"Mobile app development (React Native, Flutter, Swift, Kotlin)",11667,High,Medium,Flutter codelabs; CodeWithChris (iOS)
+"Game development (Unity, Unreal Engine, Godot)",9050,Medium,Medium,Unity Learn; Brackeys YouTube
+API development & integration,7100,Medium,Medium,Postman Learning Center; freeCodeCamp APIs
+"WordPress, Shopify, Wix development",5767,Medium,High,WordPress.org tutorials; Shopify Compass
+"CMS customization (Drupal, Joomla, Ghost)",5767,High,Medium,Official docs; YouTube tutorials
+"E-commerce development (Shopify, WooCommerce, Magento)",8267,Medium,Medium,Shopify Compass; WooCommerce docs
+"Database management (SQL, MongoDB, PostgreSQL)",8267,High,Medium,Khan Academy SQL; MongoDB University
+"Cloud development (AWS, Azure, GCP)",11667,High,Medium,AWS Training; Google Cloud Skill Boosts; Microsoft Learn
+"Server & hosting setup (Linux, cPanel, Nginx, Apache)",5775,High,Medium,DigitalOcean tutorials; Linux Journey
+"DevOps (Docker, Kubernetes, CI/CD pipelines)",11667,High,Medium,TechWorld with Nana; Docker and Kubernetes docs
+Software testing & QA,3700,Medium,Medium,Ministry of Testing; YouTube QA tutorials
+"Scripting (Python, Bash, PowerShell)",7100,High,Medium,Automate the Boring Stuff (free book); Corey Schafer YouTube
+"Automation bots (Selenium, RPA, Puppeteer)",8267,Medium,Medium,Selenium docs; UiPath Academy (RPA)
+IoT programming,7100,Medium,Medium,Arduino tutorials; Raspberry Pi Foundation
+"Blockchain development (Solidity, Smart Contracts)",12483,High,Medium,CryptoZombies; Solidity docs
+"Web3 apps (dApps, NFT marketplaces)",12483,High,Medium,Alchemy University; Moralis docs
+"Excel advanced skills (pivot tables, macros)",3092,Medium,Medium,Chandoo.org; ExcelIsFun YouTube
+Google Sheets automation,3092,Medium,Medium,Ben Collins blog; Google Sheets Help
+"Data visualization (Tableau, Power BI, Google Data Studio)",5833,High,Medium,Tableau Public tutorials; Microsoft Learn for Power BI
+SQL querying & database analysis,5833,High,Medium,Mode Analytics SQL tutorial; Khan Academy SQL
+"Python for data analysis (Pandas, NumPy, Matplotlib)",8367,High,Medium,Kaggle Learn; freeCodeCamp data analysis
+R programming for statistics,7050,Medium,Medium,RStudio primers; Coursera audit 'R Programming'
+Business Intelligence dashboards,5833,Medium,Medium,Enterprise DNA YouTube; Tableau Public
+Google Analytics (GA4),3667,Medium,Medium,Google Analytics Academy
+"Big Data tools (Hadoop, Spark)",11667,High,Medium,Databricks community tutorials; Cloudera resources
+Data cleaning & preprocessing,3667,High,Medium,Kaggle Learn; freeCodeCamp data cleaning
+Market research & surveys,3700,Medium,Medium,HubSpot articles; Google Forms guides
+A/B testing,4567,Medium,Medium,Optimizely resources; VWO blog
+"Prompt engineering (ChatGPT, MidJourney, etc.)",5767,High,Medium,LearnPrompting.org; OpenAI docs
+"AI-based content creation (text, image, video)",5767,High,High,Hugging Face course; MidJourney docs
+"Chatbot development (Dialogflow, ManyChat, Botpress)",7100,High,Medium,Dialogflow docs; Rasa docs
+"AI-assisted coding (Copilot, CodeWhisperer)",8267,High,Medium,GitHub Copilot docs; YouTube tutorials
+Natural Language Processing (NLP) basics,7050,Medium,Medium,Hugging Face course; Coursera audit NLP
+Predictive analytics & ML models,10817,High,Medium,fast.ai; Kaggle Learn
+Computer vision basics,10817,Medium,Medium,OpenCV tutorials; PyImageSearch posts
+Speech recognition & voice AI,8350,High,Medium,Hugging Face tutorials; Mozilla DeepSpeech
+"Robotic Process Automation (UiPath, BluePrism, Automation Anywhere)",7933,High,Medium,UiPath Academy; Automation Anywhere University
+Virtual assistance,2592,Medium,Medium,Horkey Handbook blog; Upwork guides
+"Project management (Agile, Scrum, Jira, Trello, Asana)",7433,Medium,Medium,Atlassian Agile Coach; Coursera audit Agile
+Product management,10817,Medium,Medium,Lenny Rachitsky blog; Product School free resources
+Business consulting & strategy,13333,Medium,Medium,Coursera audit strategy courses; HBR articles
+Financial modeling & forecasting,8267,Medium,Medium,Corporate Finance Institute free resources; Wall Street Prep free vids
+"CRM management (Salesforce, HubSpot, Zoho)",5833,Medium,Medium,Salesforce Trailhead; HubSpot Academy
+"Customer support (Zendesk, Intercom, etc.)",3125,Medium,Medium,Zendesk resources; YouTube tutorials
+Sales funnel design,5833,Medium,Medium,HubSpot Academy; ClickFunnels tutorials
+Market research & competitor analysis,3700,Medium,Medium,SimilarWeb free tier; Google Scholar guides
+Business intelligence reporting,8267,Medium,Medium,Microsoft Learn; Tableau Public
+E-commerce store setup & management,6600,Medium,Medium,Shopify Compass; Wholesale Ted YouTube
+"Bookkeeping (QuickBooks, Xero, Wave)",3458,High,Medium,Wave tutorials; QuickBooks Learn
+Payroll processing,3092,Medium,Medium,Official payroll guides; YouTube payroll tutorials
+Financial planning & analysis,8267,Medium,Medium,Aswath Damodaran lectures (YouTube); Coursera audits
+Tax preparation basics,3625,Medium,Medium,Official tax authority guides; YouTube small business tax
+Crypto trading & DeFi tools,10683,Medium,Medium,Binance Academy; CoinGecko Learn
+Stock market analysis / trading,10767,Medium,Medium,Investopedia; Rayner Teo YouTube
+Excel financial models,5033,Medium,Medium,Corporate Finance Institute free vids; Chandoo.org
+"Cybersecurity (penetration testing, ethical hacking)",13333,High,Medium,TryHackMe free paths; OWASP
+Digital forensics,10817,Medium,Medium,DFIRSchool; SANS free resources
+Cloud security & compliance,11667,High,Medium,AWS Security Labs; Microsoft Learn security modules
+Blockchain & cryptocurrency consulting,12483,High,Medium,ConsenSys academy; Coursera audit blockchain
+NFT creation & marketing,10683,High,Medium,OpenSea guides; YouTube NFT creator walkthroughs
+Smart contract development,12483,Medium,Medium,CryptoZombies; OpenZeppelin guides
+"AR/VR development (Unity, Unreal, ARKit, ARCore)",10817,Medium,Medium,Unity Learn; Unreal learning resources
+Robotics programming,10817,High,Medium,ROS tutorials; Raspberry Pi robot projects
+Drone photography & mapping,5700,Medium,High,DJI tutorials; Drone Film Guide YouTube
+3D printing & CAD design,6600,Medium,Medium,TinkerCAD; Fusion 360 tutorials
