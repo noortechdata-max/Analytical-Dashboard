@@ -46,17 +46,20 @@ b64 = base64.b64encode(csv_data).decode()
 csv_download_link = f'data:file/csv;base64,{b64}'
 
 # --- Layout: Logo + Custom Button ---
-st.markdown(
-    f"""
-    <div class="header-container">
-        <img src="logo.png" alt="Logo">
-        <a href="{csv_download_link}" download="skills_data.csv">
+col1, col2 = st.columns([1, 1])
+
+with col1:
+    st.image("logo.png", width=120)   # Streamlit ka safe function
+
+with col2:
+    st.markdown(
+        f"""
+        <a href="skills_data.csv" download="skills_data.csv">
             <button class="download-btn">Download CSV</button>
         </a>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
+        """,
+        unsafe_allow_html=True
+    )
 
 # --- Rectangle with hero layout ---
 st.markdown(
@@ -136,3 +139,4 @@ table_html_demand = """
 </table>
 """
 st.markdown(table_html_demand, unsafe_allow_html=True)
+
