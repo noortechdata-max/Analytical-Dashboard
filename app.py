@@ -31,7 +31,7 @@ st.markdown(
 col1, col2 = st.columns([3, 1], gap="small")  # flexible columns
 
 with col1:
-    st.image(os.path.join("static", "logo.png"), use_column_width=True)
+    st.image(os.path.join("logo.png"), use_column_width=True)
 
 with col2:
     with open("skills_data.csv", "rb") as csv_file:
@@ -121,3 +121,4 @@ table_html_demand = """
 </table>
 """
 st.markdown(table_html_demand, unsafe_allow_html=True)
+
