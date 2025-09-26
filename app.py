@@ -4,48 +4,53 @@ import os
 # --- Page Config ---
 st.set_page_config(page_title="My App", layout="centered")  # centered layout for mobile
 
-# --- Custom CSS for Button ---
+# --- Custom CSS ---
 st.markdown(
     """
     <style>
-    div[data-testid="stDownloadButton"] > button {
-        background-color: #0065DA !important;
-        color: white !important;
-        border: none !important;
-        border-radius: 20px !important;
-        font-family: Inter, sans-serif !important;
-        font-size: 14px !important;
-        height: 28px !important;
-        width: 128px !important;
-        cursor: pointer !important;
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;   /* ✅ keep logo & button in one row */
+        margin-bottom: 20px;
     }
-    div[data-testid="stDownloadButton"] > button:hover {
-        background-color: #0050b3 !important;
+    .header-container img {
+        width: 120px;   /* ✅ fixed logo size */
+        height: auto;
+    }
+    .download-btn {
+        background-color: #0065DA;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        font-family: Inter, sans-serif;
+        font-size: 14px;
+        height: 28px;
+        width: 128px;
+        cursor: pointer;
+    }
+    .download-btn:hover {
+        background-color: #0050b3;
     }
     </style>
     """,
     unsafe_allow_html=True,
 )
 
-# --- Logo + CSV Button Layout ---
-col1, col2 = st.columns([3, 1], gap="small")  # flexible columns
-
-with col1:
-   st.image(
-        os.path.join("logo.png"),
-        width=120,                 # ✅ fixed width for logo
-        use_container_width=False  # ✅ prevents stretching
+# --- Logo + CSV Button Layout (Flexbox) ---
+with open("skills_data.csv", "rb") as csv_file:
+    st.markdown(
+        f"""
+        <div class="header-container">
+            <img src="logo.png" alt="Logo">
+            <a href="skills_data.csv" download>
+                <button class="download-btn">Download CSV</button>
+            </a>
+        </div>
+        """,
+        unsafe_allow_html=True
     )
-
-with col2:
-    with open("skills_data.csv", "rb") as csv_file:
-        st.download_button(
-            label="Download CSV",
-            data=csv_file,
-            file_name="skills_data.csv",
-            mime="text/csv",
-            key="csv-download"
-        )
 
 # --- Rectangle with hero layout ---
 st.markdown(
@@ -125,5 +130,8 @@ table_html_demand = """
 </table>
 """
 st.markdown(table_html_demand, unsafe_allow_html=True)
+
+
+
 
 
