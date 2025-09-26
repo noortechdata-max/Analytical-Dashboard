@@ -9,12 +9,6 @@ with open("logo.png", "rb") as f:
     logo_bytes = f.read()
 logo_base64 = base64.b64encode(logo_bytes).decode()
 
-# --- Encode hero image as base64 ---
-hero_image_path = "hero_image.png"  # Replace with your image path
-with open(hero_image_path, "rb") as f:
-    hero_bytes = f.read()
-hero_base64 = base64.b64encode(hero_bytes).decode()
-
 # --- Custom CSS ---
 st.markdown("""
     <style>
@@ -53,69 +47,37 @@ st.markdown(f"""
     </div>
 """, unsafe_allow_html=True)
 
-# --- Hero Section: Text Left + Image Right ---
-st.markdown(f"""
-<div style="
-    display: flex; 
-    flex-wrap: wrap; 
-    align-items: center; 
-    justify-content: space-between; 
-    background-color:#0065DA; 
-    padding:40px; 
-    box-sizing:border-box;
-">
-    <!-- Text Column -->
-    <div style="
-        flex: 1 1 300px; 
-        margin-right:20px; 
-        color:white; 
-        font-family:Inter, sans-serif;
-        min-width: 280px;
-    ">
-        <h1 style="font-size:48px; font-weight:800; margin-bottom:20px;">
-            Skills You Can Sell Online as a <br> Freelancer
-        </h1>
-        <p style="font-size:20px; line-height:1.5;">
-            Freelancing today runs on practical digital skills, not just degrees. 
-            That's why I pulled together a list of 108+ skills you can learn and 
-            turn into real income — from design and data analysis to coding, 
-            marketing, and AI. These are skills you can pick up and start selling 
-            on Fiverr, Upwork, and LinkedIn, moving directly from learning to earning.
-            <br><br>
-            Over the past five years, I have tracked which skills stay in demand, 
-            which fade out, and which are starting to rise. Each one comes with 
-            curated resources so you don't waste time figuring out where to start. 
-            The research is powered by insights from LinkedIn, Fiverr, and Upwork, 
-            and sharpened with tech. The result is a clear, data-backed guide to focus on 
-            skills that actually pay.
-        </p>
+# --- Hero Section with original white heading ---
+st.markdown("""
+    <div style="background-color:#0065DA; width:100%; height:auto;
+                padding:40px; color:white; box-sizing:border-box;">
+        <div style="font-family: Inter, sans-serif; font-size: 20px; line-height: 1.5;">
+            <h1 style="font-size:48px; font-weight:800; color:white; margin-bottom:20px;">
+                Skills You Can Sell Online as a <br> Freelancer
+            </h1>
+            <p style="word-wrap: break-word;">
+                Freelancing today runs on practical digital skills, not just degrees.
+                That's why I pulled together a list of 108+ skills you can learn and
+                turn into real income — from design and data analysis to coding,
+                marketing, and AI. These are skills you can pick up and start selling
+                on Fiverr, Upwork, and LinkedIn, moving directly from learning to earning.
+                <br><br>
+                Over the past five years, I have tracked which skills stay in demand,
+                which fade out, and which are starting to rise. Each one comes with
+                curated resources so you don't waste time figuring out where to start.
+                The research is powered by insights from LinkedIn, Fiverr, and Upwork,
+                and sharpened with tech. The result is a clear, data-backed guide to focus on
+                skills that actually pay.
+            </p>
+        </div>
     </div>
-
-    <!-- Image Column -->
-    <div style="
-        flex: 1 1 300px; 
-        min-width: 280px; 
-        text-align:center;
-        margin-top:20px;
-    ">
-        <img src="data:image/png;base64,{hero_base64}" style="max-width:100%; height:auto; border-radius:10px;">
-    </div>
-</div>
-""", unsafe_allow_html=True)
-
-
-    <!-- Image Column -->
-    <div style="flex:1; min-width:300px; text-align:right;">
-        <img src="data:image/png;base64,{hero_base64}" style="max-width:100%; height:auto; border-radius:10px;">
-    </div>
-</div>
 """, unsafe_allow_html=True)
 
 # --- Top Paid Skills Heading (black) ---
 st.markdown(
     "<h2 style='font-size:36px; font-weight:700; color:black; "
     "margin-top:40px; margin-bottom:20px; font-family:Inter, sans-serif;'>"
-    "Top Paid Skills</h2>", 
+    "Top Paid Skills</h2>",
     unsafe_allow_html=True
 )
 
@@ -140,7 +102,7 @@ st.markdown(table_html, unsafe_allow_html=True)
 st.markdown(
     "<h2 style='font-size:36px; font-weight:700; color:black; "
     "margin-top:40px; margin-bottom:20px; font-family:Inter, sans-serif;'>"
-    "Top In-Demand Skills</h2>", 
+    "Top In-Demand Skills</h2>",
     unsafe_allow_html=True
 )
 
@@ -169,32 +131,32 @@ st.markdown("""
         </h2>
         <a href="skills_data.csv" download="skills_data.csv">
             <button style="
-                background-color:#0065DA; 
-                color:white; 
-                border:none; 
-                border-radius:20px; 
-                height:28px; 
-                width:128px; 
-                font-family:Inter,sans-serif; 
+                background-color:#0065DA;
+                color:white;
+                border:none;
+                border-radius:20px;
+                height:28px;
+                width:128px;
+                font-family:Inter,sans-serif;
                 font-size:14px;
                 cursor:pointer;
             ">Download CSV</button>
         </a>
     </div>
 """, unsafe_allow_html=True)
-
 # --- Footer ---
 st.markdown("""
     <hr style="border:1px solid #0065DA;">
     <p style='text-align:center; color:#0065DA; font-size:16px; font-family:Inter, sans-serif; margin-top:10px;'>
-        © 2025 Noor | 
-        <a href='https://www.linkedin.com/in/noor-fatima-18480a2a6/' target='_blank' style='color:#0065DA; text-decoration:none;'>LinkedIn</a> | 
+        © 2025 Noor |
+        <a href='https://www.linkedin.com/in/noor-fatima-18480a2a6/' target='_blank' style='color:#0065DA; text-decoration:none;'>LinkedIn</a> |
         <a href='https://github.com/noortechdata-max' target='_blank' style='color:#0065DA; text-decoration:none;'>GitHub</a>
     </p>
 """, unsafe_allow_html=True)
 
       
                 
+
 
 
 
