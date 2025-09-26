@@ -9,50 +9,57 @@ with open("logo.png", "rb") as f:
     logo_bytes = f.read()
 logo_base64 = base64.b64encode(logo_bytes).decode()
 
-# --- Load CSV File ---
-with open("skills_data.csv", "rb") as f:
-    csv_data = f.read()
-
 # --- Custom CSS ---
 st.markdown("""
     <style>
-    .stDownloadButton button {
-        background-color: #0065DA !important;
-        color: white !important;
-        border: none !important;
-        border-radius: 20px !important;
-        font-family: Inter, sans-serif !important;
-        font-size: 14px !important;
-        height: 28px !important;
-        width: 128px !important;
-        cursor: pointer !important;
+    .download-btn {
+        background-color: #0065DA;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        font-family: Inter, sans-serif;
+        font-size: 14px;
+        height: 28px;
+        width: 128px;
+        cursor: pointer;
     }
-    .stDownloadButton button:hover {
-        background-color: #0050b3 !important;
+    .download-btn:hover {
+        background-color: #0050b3;
     }
     .header-container {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        flex-wrap: nowrap;
+        align-items: center; /* vertical align logo & button */
+        flex-wrap: nowrap;   /* prevent stacking on mobile */
         width: 100%;
         margin-bottom: 20px;
+    }
+    .center-btn {
+        background-color:#0065DA;
+        color:white;
+        border:none;
+        border-radius:20px;
+        height:36px;
+        width:160px;
+        font-family:Inter,sans-serif;
+        font-size:16px;
+        cursor:pointer;
+    }
+    .center-btn:hover {
+        background-color:#0050b3;
     }
     </style>
 """, unsafe_allow_html=True)
 
 # --- Header: Logo + Download CSV Button ---
-col1, col2 = st.columns([6, 1])
-with col1:
-    st.markdown(f"<img src='data:image/png;base64,{logo_base64}' width='120' alt='Logo'>", unsafe_allow_html=True)
-with col2:
-    st.download_button(
-        label="Download CSV",
-        data=csv_data,
-        file_name="skills_data.csv",
-        mime="text/csv",
-        key="header_csv",
-    )
+st.markdown(f"""
+    <div class="header-container">
+        <img src="data:image/png;base64,{logo_base64}" width="120" alt="Logo">
+        <a href="skills_data.csv" download="skills_data.csv">
+            <button class="download-btn">Download CSV</button>
+        </a>
+    </div>
+""", unsafe_allow_html=True)
 
 # --- Hero Section with original white heading ---
 st.markdown("""
@@ -130,22 +137,17 @@ table_html_demand = """
 """
 st.markdown(table_html_demand, unsafe_allow_html=True)
 
-# --- Bottom Section: Centered Heading + CSV Button (heading black) ---
+# --- Bottom Section: Centered Heading + CSV Button ---
 st.markdown("""
-    <div style="width:100%; margin-top:60px; margin-bottom:20px; text-align:center;">
+    <div style="width:100%; margin-top:60px; margin-bottom:60px; text-align:center;">
         <h2 style="font-family:Inter, sans-serif; color:black; font-size:36px; font-weight:700; margin-bottom:20px;">
             Download Skills CSV
         </h2>
+        <a href="skills_data.csv" download="skills_data.csv">
+            <button class="center-btn">Download CSV</button>
+        </a>
     </div>
 """, unsafe_allow_html=True)
-
-st.download_button(
-    label="Download CSV",
-    data=csv_data,
-    file_name="skills_data.csv",
-    mime="text/csv",
-    key="footer_csv",
-)
 
 # --- Footer ---
 st.markdown("""
@@ -160,6 +162,7 @@ st.markdown("""
 
       
                 
+
 
 
 
