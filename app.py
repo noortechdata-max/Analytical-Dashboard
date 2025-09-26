@@ -2,7 +2,7 @@ import streamlit as st
 import os
 
 # --- Page Config ---
-st.set_page_config(page_title="My App", layout="centered")  # centered layout for mobile
+st.set_page_config(page_title="My App", layout="wide")  # full width on desktop
 
 # --- Custom CSS ---
 st.markdown(
@@ -43,7 +43,7 @@ with open("skills_data.csv", "rb") as csv_file:
     st.markdown(
         f"""
         <div class="header-container">
-            <img src="logo.png" alt="Logo">
+         <st.image src="logo.png" alt="Logo">
             <a href="skills_data.csv" download>
                 <button class="download-btn">Download CSV</button>
             </a>
@@ -130,6 +130,7 @@ table_html_demand = """
 </table>
 """
 st.markdown(table_html_demand, unsafe_allow_html=True)
+
 
 
 
