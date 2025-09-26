@@ -38,18 +38,24 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# --- Header: Logo + Button ---
-st.markdown(
-    """
-    <div class="header-container">
-        <img src="logo.png" alt="Logo">
-        <a href="skills_data.csv" download="skills_data.csv">
-            <button class="download-btn">Download CSV</button>
-        </a>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
+# --- Layout: Logo (Streamlit) + Button (HTML)
+col1, col2 = st.columns([1, 5])  # adjust width ratio
+
+with col1:
+    st.image("logo.png", width=120)
+
+with col2:
+    st.markdown(
+        """
+        <div style="text-align:right;">
+            <a href="skills_data.csv" download="skills_data.csv">
+                <button class="download-btn">Download CSV</button>
+            </a>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
 
 # --- Rectangle with hero layout ---
 st.markdown(
@@ -129,6 +135,7 @@ table_html_demand = """
 </table>
 """
 st.markdown(table_html_demand, unsafe_allow_html=True)
+
 
 
 
