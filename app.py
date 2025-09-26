@@ -46,15 +46,15 @@ with col1:
 
 with col2:
     st.markdown(
-        """
-        <div style="text-align:right;">
-            <a href="skills_data.csv" download="skills_data.csv">
-                <button class="download-btn">Download CSV</button>
-            </a>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    """
+    <div style="display: flex; justify-content: flex-end; align-items: center; width: 100%;">
+        <a href="skills_data.csv" download="skills_data.csv">
+            <button class="download-btn">Download CSV</button>
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 
 # --- Rectangle with hero layout ---
@@ -135,6 +135,7 @@ table_html_demand = """
 </table>
 """
 st.markdown(table_html_demand, unsafe_allow_html=True)
+
 
 
 
