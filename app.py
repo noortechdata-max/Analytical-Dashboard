@@ -1,24 +1,17 @@
 import streamlit as st
+import base64
 
 # --- Page Config ---
-st.set_page_config(page_title="My App", layout="wide")  # full width
+st.set_page_config(page_title="My App", layout="wide")
+
+# --- Encode local logo as base64 ---
+with open("logo.png", "rb") as f:
+    logo_bytes = f.read()
+logo_base64 = base64.b64encode(logo_bytes).decode()
 
 # --- Custom CSS ---
-st.markdown(
-    """
+st.markdown("""
     <style>
-    .header-container {
-        display: flex;
-        justify-content: space-between;  /* logo left, button right */
-        align-items: center;
-        flex-wrap: nowrap;               /* ✅ no stacking in mobile */
-        margin-bottom: 20px;
-        width: 100%;
-    }
-    .header-container img {
-        width: 120px;   /* ✅ fixed logo size */
-        height: auto;
-    }
     .download-btn {
         background-color: #0065DA;
         color: white;
@@ -33,29 +26,29 @@ st.markdown(
     .download-btn:hover {
         background-color: #0050b3;
     }
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; /* vertical align logo & button */
+        flex-wrap: nowrap;   /* prevents stacking on mobile */
+        width: 100%;
+        margin-bottom: 20px;
+    }
     </style>
-    """,
-    unsafe_allow_html=True,
-)
+""", unsafe_allow_html=True)
 
-# --- Layout: Logo (Streamlit) + Button (HTML)
-col1, col2 = st.columns([1, 5])  # adjust width ratio
-
-with col1:
-    st.image("logo.png", width=120)
-
-with col2:
-    st.markdown("""
-    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-        <img src="logo.png" width="120">
+# --- Header: Logo + Download Button ---
+st.markdown(f"""
+    <div class="header-container">
+        <img src="data:image/png;base64,{logo_base64}" width="120" alt="Logo">
         <a href="skills_data.csv" download="skills_data.csv">
             <button class="download-btn">Download CSV</button>
         </a>
     </div>
 """, unsafe_allow_html=True)
-# --- Rectangle with hero layout ---
-st.markdown(
-    """
+
+# --- Hero Section ---
+st.markdown("""
     <div style="background-color:#0065DA; width:100%; height:auto; 
                 padding:40px; color:white; box-sizing:border-box;">
         <div style="font-family: Inter, sans-serif; font-size: 20px; line-height: 1.5;">
@@ -78,9 +71,7 @@ st.markdown(
             </p>
         </div>
     </div>
-    """,
-    unsafe_allow_html=True,
-)
+""", unsafe_allow_html=True)
 
 # --- Top Paid Skills Heading ---
 st.markdown(
@@ -90,7 +81,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# --- Dashboard Table ---
+# --- Dashboard Table: Top Paid Skills ---
 table_html = """
 <table style="width:100%; border-collapse: collapse; font-family: Inter, sans-serif; font-size: 16px; margin-top: 10px;">
     <tr>
@@ -115,7 +106,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# --- Dashboard Table ---
+# --- Dashboard Table: Top In-Demand Skills ---
 table_html_demand = """
 <table style="width:100%; border-collapse: collapse; font-family: Inter, sans-serif; font-size: 16px; margin-top: 10px;">
     <tr>
@@ -131,6 +122,7 @@ table_html_demand = """
 </table>
 """
 st.markdown(table_html_demand, unsafe_allow_html=True)
+
 
 
 
