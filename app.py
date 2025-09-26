@@ -2,7 +2,7 @@ import streamlit as st
 import os
 
 # --- Page Config ---
-st.set_page_config(page_title="My App", layout="wide")  # full width on desktop
+st.set_page_config(page_title="My App", layout="wide")  # full width
 
 # --- Custom CSS ---
 st.markdown(
@@ -12,8 +12,9 @@ st.markdown(
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-wrap: nowrap;   /* ✅ keep logo & button in one row */
+        flex-wrap: nowrap;   /* ✅ same row desktop + mobile */
         margin-bottom: 20px;
+        width: 100%;
     }
     .header-container img {
         width: 120px;   /* ✅ fixed logo size */
@@ -38,19 +39,21 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# --- Logo + CSV Button Layout (Flexbox) ---
-with open("skills_data.csv", "rb") as csv_file:
-    st.markdown(
-        f"""
-        <div class="header-container">
-         <st.image src="logo.png" alt="Logo">
-            <a href="skills_data.csv" download>
-                <button class="download-btn">Download CSV</button>
-            </a>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+# --- Logo + CSV Button Layout (HTML only) ---
+logo_path = "logo.png"       # make sure file exists in same folder
+csv_path = "skills_data.csv" # make sure file exists in same folder
+
+st.markdown(
+    f"""
+    <div class="header-container">
+        <img src="{logo_path}" alt="Logo">
+        <a href="{csv_path}" download>
+            <button class="download-btn">Download CSV</button>
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # --- Rectangle with hero layout ---
 st.markdown(
@@ -130,8 +133,6 @@ table_html_demand = """
 </table>
 """
 st.markdown(table_html_demand, unsafe_allow_html=True)
-
-
 
 
 
