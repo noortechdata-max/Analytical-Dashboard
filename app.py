@@ -45,7 +45,6 @@ with col1:
     st.image("logo.png", width=120)
 
 with col2:
-# --- Logo + Button in a single flex container ---
 st.markdown("""
     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
         <img src="logo.png" width="120">
@@ -132,6 +131,7 @@ table_html_demand = """
 </table>
 """
 st.markdown(table_html_demand, unsafe_allow_html=True)
+
 
 
 
