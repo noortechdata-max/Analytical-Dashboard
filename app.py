@@ -55,9 +55,23 @@ st.markdown(f"""
 
 # --- Hero Section: Text Left + Image Right ---
 st.markdown(f"""
-<div style="display:flex; flex-wrap: wrap; align-items:center; justify-content:space-between; background-color:#0065DA; padding:40px; box-sizing:border-box;">
+<div style="
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center; 
+    justify-content: space-between; 
+    background-color:#0065DA; 
+    padding:40px; 
+    box-sizing:border-box;
+">
     <!-- Text Column -->
-    <div style="flex:1; min-width:300px; margin-right:20px; color:white; font-family:Inter, sans-serif;">
+    <div style="
+        flex: 1 1 300px; 
+        margin-right:20px; 
+        color:white; 
+        font-family:Inter, sans-serif;
+        min-width: 280px;
+    ">
         <h1 style="font-size:48px; font-weight:800; margin-bottom:20px;">
             Skills You Can Sell Online as a <br> Freelancer
         </h1>
@@ -76,6 +90,19 @@ st.markdown(f"""
             skills that actually pay.
         </p>
     </div>
+
+    <!-- Image Column -->
+    <div style="
+        flex: 1 1 300px; 
+        min-width: 280px; 
+        text-align:center;
+        margin-top:20px;
+    ">
+        <img src="data:image/png;base64,{hero_base64}" style="max-width:100%; height:auto; border-radius:10px;">
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
 
     <!-- Image Column -->
     <div style="flex:1; min-width:300px; text-align:right;">
@@ -168,6 +195,7 @@ st.markdown("""
 
       
                 
+
 
 
 
