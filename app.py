@@ -39,22 +39,20 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# --- Logo + CSV Button Layout ---
-logo_path = "logo.png"       # ✅ make sure file exists in same folder
-csv_path = "skills_data.csv" # ✅ make sure file exists in same folder
+# --- Layout: Logo + Button ---
+col1, col2 = st.columns([1, 1])
 
-st.markdown(
-    f"""
-    <div class="header-container">
-        <img src="{logo_path}" alt="Logo">
-        <a href="{csv_path}" download>
-            <button class="download-btn">Download CSV</button>
-        </a>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
+with col1:
+    st.image("logo.png", width=120)   # ✅ Logo hamesha dikhega
 
+with col2:
+    with open("skills_data.csv", "rb") as f:
+        st.download_button(
+            label="Download CSV",     # ✅ Streamlit ka apna button
+            data=f.read(),
+            file_name="skills_data.csv",
+            mime="text/csv",
+        )
 # --- Rectangle with hero layout ---
 st.markdown(
     """
@@ -133,6 +131,7 @@ table_html_demand = """
 </table>
 """
 st.markdown(table_html_demand, unsafe_allow_html=True)
+
 
 
 
