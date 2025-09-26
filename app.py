@@ -131,6 +131,29 @@ st.markdown("""
         <a href='https://github.com/noortechdata-max' target='_blank' style='color:#0065DA; text-decoration:none;'>GitHub</a>
     </p>
 """, unsafe_allow_html=True)
+# --- Bottom Section: Centered Heading + CSV Button ---
+st.markdown("""
+    <div style="width:100%; margin-top:60px; margin-bottom:60px; text-align:center;">
+        <h2 style="font-family:Inter, sans-serif; color:#0065DA; font-size:36px; font-weight:700; margin-bottom:20px;">
+            Download Skills CSV
+        </h2>
+        <a href="skills_data.csv" download="skills_data.csv">
+            <button style="
+                background-color:#0065DA; 
+                color:white; 
+                border:none; 
+                border-radius:20px; 
+                height:28px; 
+                width:128px; 
+                font-family:Inter,sans-serif; 
+                font-size:14px;
+                cursor:pointer;
+            ">Download CSV</button>
+        </a>
+    </div>
+""", unsafe_allow_html=True)
+
+
 
 
 
