@@ -22,24 +22,10 @@ st.markdown("""
         border: none;
         border-radius: 20px;
         font-family: Inter, sans-serif;
-        font-size: 14px;
-        height: 28px;
-        width: 128px;
         cursor: pointer;
     }
     .stDownloadButton>button:hover {
         background-color: #0050b3;
-    }
-    .center-btn>button {
-        background-color:#0065DA !important;
-        color:white !important;
-        border:none !important;
-        border-radius:20px !important;
-        height:36px !important;
-        width:160px !important;
-        font-family:Inter,sans-serif !important;
-        font-size:16px !important;
-        cursor:pointer !important;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -82,15 +68,15 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Centered Button
-st.markdown("<div style='text-align:center;'>", unsafe_allow_html=True)
-st.download_button(
-    label="Download CSV",
-    data=csv_file,
-    file_name="skills_data.csv",
-    mime="text/csv",
-    key="bottom_csv"
-)
-st.markdown("</div>", unsafe_allow_html=True)
+c1, c2, c3 = st.columns([3,2,3])  # center column approach
+with c2:
+    st.download_button(
+        label="Download CSV",
+        data=csv_file,
+        file_name="skills_data.csv",
+        mime="text/csv",
+        key="bottom_csv"
+    )
 
 # --- Footer ---
 st.markdown("""
@@ -101,24 +87,6 @@ st.markdown("""
         <a href='https://github.com/noortechdata-max' target='_blank' style='color:#0065DA; text-decoration:none;'>GitHub</a>
     </p>
 """, unsafe_allow_html=True)
-
-
-
-      
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
