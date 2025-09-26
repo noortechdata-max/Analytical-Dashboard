@@ -1,8 +1,8 @@
 import streamlit as st
-import os
+import base64
 
 # --- Page Config ---
-st.set_page_config(page_title="My App", layout="wide")  # full width
+st.set_page_config(page_title="My App", layout="wide")
 
 # --- Custom CSS ---
 st.markdown(
@@ -12,12 +12,12 @@ st.markdown(
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-wrap: nowrap;   /* ✅ same row desktop + mobile */
+        flex-wrap: nowrap;
         margin-bottom: 20px;
         width: 100%;
     }
     .header-container img {
-        width: 120px;   /* ✅ fixed logo size */
+        width: 120px;
         height: auto;
     }
     .download-btn {
@@ -39,20 +39,25 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# --- Layout: Logo + Button ---
-col1, col2 = st.columns([1, 1])
+# --- Encode CSV for HTML download button ---
+with open("skills_data.csv", "rb") as f:
+    csv_data = f.read()
+b64 = base64.b64encode(csv_data).decode()
+csv_download_link = f'data:file/csv;base64,{b64}'
 
-with col1:
-    st.image("logo.png", width=120)   # ✅ Logo hamesha dikhega
+# --- Layout: Logo + Custom Button ---
+st.markdown(
+    f"""
+    <div class="header-container">
+        <img src="logo.png" alt="Logo">
+        <a href="{csv_download_link}" download="skills_data.csv">
+            <button class="download-btn">Download CSV</button>
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 
-with col2:
-    with open("skills_data.csv", "rb") as f:
-        st.download_button(
-            label="Download CSV",     # ✅ Streamlit ka apna button
-            data=f.read(),
-            file_name="skills_data.csv",
-            mime="text/csv",
-        )
 # --- Rectangle with hero layout ---
 st.markdown(
     """
@@ -131,11 +136,3 @@ table_html_demand = """
 </table>
 """
 st.markdown(table_html_demand, unsafe_allow_html=True)
-
-
-
-
-
-
-
-
