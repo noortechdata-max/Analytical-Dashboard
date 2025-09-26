@@ -53,13 +53,13 @@ with col1:
 
 with col2:
     st.markdown(
-        f"""
-        <a href="skills_data.csv" download="skills_data.csv">
+       <a href="{csv_download_link}" download="skills_data.csv">
             <button class="download-btn">Download CSV</button>
         </a>
-        """,
-        unsafe_allow_html=True
-    )
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 
 # --- Rectangle with hero layout ---
 st.markdown(
@@ -139,4 +139,5 @@ table_html_demand = """
 </table>
 """
 st.markdown(table_html_demand, unsafe_allow_html=True)
+
 
