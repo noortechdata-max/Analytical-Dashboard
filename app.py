@@ -39,21 +39,18 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# --- Logo + CSV Button Layout (HTML only) ---
-logo_path = "logo.png"       # make sure file exists in same folder
-csv_path = "skills_data.csv" # make sure file exists in same folder
+col1, col2 = st.columns([1, 1])
 
-st.markdown(
-    f"""
-    <div class="header-container">
-        <img src="{logo_path}" alt="Logo">
-        <a href="{csv_path}" download>
-            <button class="download-btn">Download CSV</button>
-        </a>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+with col1:
+    st.image("logo.png", width=120)
+
+with col2:
+    st.download_button(
+        label="Download CSV",
+        data=open("skills_data.csv", "rb").read(),
+        file_name="skills_data.csv",
+        mime="text/csv",
+    )
 
 # --- Rectangle with hero layout ---
 st.markdown(
@@ -133,6 +130,7 @@ table_html_demand = """
 </table>
 """
 st.markdown(table_html_demand, unsafe_allow_html=True)
+
 
 
 
