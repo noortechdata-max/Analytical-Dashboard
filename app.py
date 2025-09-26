@@ -122,6 +122,17 @@ table_html_demand = """
 </table>
 """
 st.markdown(table_html_demand, unsafe_allow_html=True)
+# --- Footer ---
+st.markdown("""
+    <hr style="border:1px solid #0065DA;">
+    <p style='text-align:center; color:#0065DA; font-size:16px; font-family:Inter, sans-serif; margin-top:10px;'>
+        © 2025 Noor | 
+        <a href='https://www.linkedin.com/in/noor-fatima-18480a2a6/' target='_blank' style='color:#0065DA; text-decoration:none;'>LinkedIn</a> | 
+        <a href='https://github.com/noortechdata-max' target='_blank' style='color:#0065DA; text-decoration:none;'>GitHub</a>
+    </p>
+""", unsafe_allow_html=True)
+
+
 
 
 
