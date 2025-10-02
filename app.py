@@ -90,6 +90,56 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
+# --- Top Paid Skills Heading ---
+st.markdown(
+    "<h2 style='font-size:36px; font-weight:700; color:#0065DA; "
+    "margin-top:40px; margin-bottom:20px; font-family:Inter, sans-serif;'>"
+    "Top Paid Skills</h2>",
+    unsafe_allow_html=True
+)
+
+# --- Dashboard Table: Top Paid Skills ---
+table_html = """
+<table style="width:100%; border-collapse: collapse; font-family: Inter, sans-serif; font-size: 16px; margin-top: 10px;">
+    <tr>
+        <th style="background-color:#0065DA; color:white; padding:12px; text-align:left;">Skill</th>
+        <th style="background-color:#0065DA; color:white; padding:12px; text-align:left;">Avg Monthly (USD)</th>
+        <th style="background-color:#0065DA; color:white; padding:12px; text-align:left;">Demand</th>
+    </tr>
+    <tr><td>AI & Machine Learning</td><td>$6500</td><td>High</td></tr>
+    <tr><td>Data Science</td><td>$6000</td><td>High</td></tr>
+    <tr><td>Cloud Computing</td><td>$5800</td><td>High</td></tr>
+    <tr><td>Cybersecurity</td><td>$5500</td><td>High</td></tr>
+    <tr><td>Blockchain Development</td><td>$5200</td><td>Medium</td></tr>
+</table>
+"""
+st.markdown(table_html, unsafe_allow_html=True)
+
+# --- Top In-Demand Skills Heading ---
+st.markdown(
+    "<h2 style='font-size:36px; font-weight:700; color:#0065DA; "
+    "margin-top:40px; margin-bottom:20px; font-family:Inter, sans-serif;'>"
+    "Top In-Demand Skills</h2>",
+    unsafe_allow_html=True
+)
+
+# --- Dashboard Table: Top In-Demand Skills ---
+table_html_demand = """
+<table style="width:100%; border-collapse: collapse; font-family: Inter, sans-serif; font-size: 16px; margin-top: 10px;">
+    <tr>
+        <th style="background-color:#0065DA; color:white; padding:12px; text-align:left;">Skill</th>
+        <th style="background-color:#0065DA; color:white; padding:12px; text-align:left;">Demand Level</th>
+        <th style="background-color:#0065DA; color:white; padding:12px; text-align:left;">Avg Monthly (USD)</th>
+    </tr>
+    <tr><td>Generative AI</td><td>Very High</td><td>$6200</td></tr>
+    <tr><td>Data Analytics</td><td>High</td><td>$5000</td></tr>
+    <tr><td>Cloud Computing</td><td>High</td><td>$5800</td></tr>
+    <tr><td>Cybersecurity</td><td>High</td><td>$5500</td></tr>
+    <tr><td>UI/UX Design</td><td>Medium</td><td>$4000</td></tr>
+</table>
+"""
+st.markdown(table_html_demand, unsafe_allow_html=True)
+
 # --- Bottom Section: Centered Heading + CSV Button ---
 st.markdown(
     "<h2 style='text-align:center; font-size:36px; font-weight:700; margin-top:60px; margin-bottom:20px; font-family:Inter, sans-serif;'>"
@@ -129,6 +179,7 @@ st.markdown("""
         <a href='https://github.com/noortechdata-max' target='_blank' style='color:#0065DA; text-decoration:none;'>GitHub</a>
     </p>
 """, unsafe_allow_html=True)
+
 
 
 
